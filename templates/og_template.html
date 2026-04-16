@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="/">Back</a>
+    <h1 style="text-align: center">Madlibs Page</h1>
+
+    <!-- n is noun, a is adjective, and v is verb. -->
+
+    <h2 style="text-align: center;">
+        Next week, {{n}} will be {{v}} due to {{n2}}. A very {{a}} {{n3}} will
+        also be {{v2}} because of a {{a2}} guy. Everyone will become {{n4}}.
+    </h2>
+    <div style="justify-content: center; display: flex;">
+        <button onclick="location.reload();">Reload</button>
+    </div>
+</body>
+</html>
