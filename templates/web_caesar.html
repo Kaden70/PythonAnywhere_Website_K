@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <section class="centered" style="word-wrap: break-word;">
+            <form action="/web_caesar" method="POST" class="centered">
+                <h1>Caesar Cipher</h1>
+                <label><textarea id="enterCipher" name="Text_Entered" placeholder="Enter text here..." minlength="1" maxlength="100000" required>{{display_text}}</textarea></label><br>
+                <label><input type="number" name="Shift_Number" placeholder="Enter a number 1-25 to shift..." min="1" max="25" value="{{Shift_Number}}" required></label><br>
+                <label><input type="radio" value="encrypt" name="Cypher" checked>Encrypt</label><br>
+                <label><input type="radio" value="decrypt" name="Cypher">Decrypt</label><br>
+                <button>Encrypt or Decrypt Your Message</button>
+            </form>
+        </section>
+        <h2>Original Message: {{o_message}}</h2>
+        <h2>Coded Message: {{c_message}}</h2>
+        <h2>Coded: {{Cypher}}</h2>
+    </body>
+</html>
